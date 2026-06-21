@@ -4,7 +4,9 @@
   "description": "Portfolio personal de Agustin Gigena",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "dev": "npx serve . -l 3000",
+    "preview": "npx serve . -l 3000 --open"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
