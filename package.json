@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-agustin-gigena",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Agustin Gigena",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
