@@ -140,3 +140,26 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// ============================================
+// Contact Form (mailto)
+// ============================================
+const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = (document.getElementById('name') as HTMLInputElement).value.trim();
+        const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+        const message = (document.getElementById('message') as HTMLTextAreaElement).value.trim();
+
+        if (!name || !email || !message) return;
+
+        const to = 'agustingigena1704@gmail.com';
+        const subject = encodeURIComponent(`Contacto desde portfolio — ${name}`);
+        const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`);
+
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+}
