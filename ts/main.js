@@ -64,6 +64,9 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
         }
+        else {
+            entry.target.classList.remove('revealed');
+        }
     });
 }, observerOptions);
 document.querySelectorAll('.reveal').forEach(el => {
