@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-22T00:00:00.000Z",
+  "title": "Design System: Portfolio Agustin Gigena",
+  "extensions": {
+    "colorMeta": {
+      "senal": {
+        "role": "primary",
+        "displayName": "Señal",
+        "canonical": "oklch(55% 0.18 265)",
+        "tonalRamp": ["oklch(25% 0.18 265)", "oklch(35% 0.18 265)", "oklch(45% 0.18 265)", "oklch(55% 0.18 265)", "oklch(65% 0.18 265)", "oklch(75% 0.16 265)", "oklch(85% 0.12 265)", "oklch(95% 0.06 265)"]
+      },
+      "senal-profunda": {
+        "role": "secondary",
+        "displayName": "Señal-profunda",
+        "canonical": "oklch(45% 0.2 305)",
+        "tonalRamp": ["oklch(20% 0.2 305)", "oklch(30% 0.2 305)", "oklch(40% 0.2 305)", "oklch(50% 0.2 305)", "oklch(60% 0.18 305)", "oklch(70% 0.15 305)", "oklch(82% 0.1 305)", "oklch(94% 0.05 305)"]
+      },
+      "acento-calido": {
+        "role": "tertiary",
+        "displayName": "Acento-cálido",
+        "canonical": "oklch(75% 0.15 80)",
+        "tonalRamp": ["oklch(30% 0.15 80)", "oklch(40% 0.15 80)", "oklch(55% 0.15 80)", "oklch(70% 0.15 80)", "oklch(78% 0.14 80)", "oklch(85% 0.1 80)", "oklch(92% 0.06 80)", "oklch(97% 0.03 80)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(15% 0 0)",
+        "tonalRamp": ["oklch(5% 0 0)", "oklch(10% 0 0)", "oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(40% 0 0)", "oklch(55% 0 0)", "oklch(72% 0 0)", "oklch(90% 0 0)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "oklch(50% 0 0)",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(50% 0 0)", "oklch(60% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name. Solo aparece una vez por página." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de sección." },
+      "body": { "displayName": "Body", "purpose": "Texto corrido, descripciones, párrafos." },
+      "mono": { "displayName": "Mono", "purpose": "Tags técnicos, fechas, código." }
+    },
+    "shadows": [
+      { "name": "card-hover", "value": "0 8px 24px rgba(0,0,0,0.15)", "purpose": "Elevación de tarjeta en hover." },
+      { "name": "btn-hover", "value": "0 4px 16px rgba(37,99,235,0.3)", "purpose": "Sombra de botón primario en hover." },
+      { "name": "link-hover", "value": "0 4px 12px rgba(0,0,0,0.08)", "purpose": "Sombra de link de contacto en hover." },
+      { "name": "hero-photo", "value": "0 8px 32px rgba(0,0,0,0.08)", "purpose": "Sombra estructural de la foto de perfil." }
+    ],
+    "motion": [
+      { "name": "ease-default", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Easing estándar para transiciones de estado (hover, focus)." },
+      { "name": "ease-reveal", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing para entradas por scroll (reveal)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "480px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Botón de acción principal. Fondo Señal, texto blanco. Usado en formulario de contacto.",
+      "html": "<button class=\"ds-btn-primary\">Enviar mensaje</button>",
+      "css": ".ds-btn-primary { background: #2563eb; color: #fff; border: none; border-radius: 8px; padding: 12px 24px; font-family: Inter, sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,99,235,0.3); } .ds-btn-primary:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Tarjeta de proyecto en la grilla. Borde sutil, sin sombra en reposo, se eleva en hover.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-name\">RugbyEngine</div><div class=\"ds-card-desc\">Motor de juego en C# para gestión de rugby.</div><div class=\"ds-card-tags\"><span class=\"ds-tag\">C#</span><span class=\"ds-tag\">.NET</span></div><a class=\"ds-card-link\" href=\"#\">Ver en GitHub →</a></div>",
+      "css": ".ds-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-color: #7c3aed; } .ds-card-name { font-size: 1.15rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; } .ds-card-desc { font-size: 0.9rem; color: #666; margin-bottom: 1rem; flex-grow: 1; line-height: 1.6; } .ds-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; } .ds-tag { background: #e8f0fe; color: #1a56db; border-radius: 6px; padding: 4px 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 500; transition: background 0.2s, color 0.2s, transform 0.2s; } .ds-tag:hover { background: linear-gradient(135deg, #2563eb, #7c3aed); color: #fff; transform: translateY(-2px); } .ds-card-link { color: #2563eb; font-size: 0.9rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; } .ds-card-link:hover { text-decoration: underline; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de texto de formulario. Fondo secundario, borde sutil, focus en Señal.",
+      "html": "<div class=\"ds-input-group\"><label class=\"ds-label\">Email</label><input class=\"ds-input\" type=\"email\" placeholder=\"tu@email.com\"></div>",
+      "css": ".ds-input-group { display: flex; flex-direction: column; gap: 0.4rem; } .ds-label { font-size: 0.85rem; font-weight: 600; color: #1a1a1a; } .ds-input { padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #f8f9fa; color: #1a1a1a; font-family: Inter, sans-serif; font-size: 0.95rem; transition: border-color 0.2s; } .ds-input:focus { outline: none; border-color: #2563eb; } .ds-input::placeholder { color: #666; }"
+    },
+    {
+      "name": "Navbar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Barra de navegación fija con backdrop blur. Logo, links, toggle de tema y menú hamburguesa en mobile.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-logo\" href=\"#\">Agustin Gigena</a><div class=\"ds-nav-links\"><a class=\"ds-nav-link active\" href=\"#\">Sobre mí</a><a class=\"ds-nav-link\" href=\"#\">Experiencia</a><a class=\"ds-nav-link\" href=\"#\">Skills</a></div></div></nav>",
+      "css": ".ds-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb; } .ds-nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; } .ds-logo { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; text-decoration: none; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-link { color: #666; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; position: relative; } .ds-nav-link:hover, .ds-nav-link.active { color: #2563eb; } .ds-nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(135deg, #2563eb, #7c3aed); transition: width 0.2s; } .ds-nav-link:hover::after, .ds-nav-link.active::after { width: 100%; } .ds-nav-link.active { color: #2563eb; }"
+    },
+    {
+      "name": "Stat Counter",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Métrica destacada con número animado y label. Cuadrícula de 4 en desktop, 2 en tablet.",
+      "html": "<div class=\"ds-stat\"><div class=\"ds-stat-number\">4+</div><div class=\"ds-stat-label\">Años de experiencia</div></div>",
+      "css": ".ds-stat { text-align: center; padding: 2rem 1.5rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; } .ds-stat:hover { border-color: #7c3aed; box-shadow: 0 8px 24px rgba(0,0,0,0.15); transform: translateY(-2px); } .ds-stat-number { font-size: 2.5rem; font-weight: 700; color: #2563eb; line-height: 1; margin-bottom: 0.5rem; } .ds-stat-label { color: #666; font-size: 0.9rem; font-weight: 500; }"
+    },
+    {
+      "name": "Timeline Item",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Elemento de línea de tiempo con fecha, empresa, rol y lista de logros.",
+      "html": "<div class=\"ds-timeline-item\"><div class=\"ds-timeline-date\">2024 — Presente</div><div class=\"ds-timeline-company\">Alephoo</div><div class=\"ds-timeline-role\">Desarrollador de Soluciones</div><ul class=\"ds-timeline-list\"><li>Lideré el equipo de soporte técnico avanzado</li></ul></div>",
+      "css": ".ds-timeline-item { position: relative; padding-bottom: 3rem; padding-left: 2rem; } .ds-timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #7c3aed); border: 3px solid #fff; } .ds-timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; } .ds-timeline-company { font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.25rem; } .ds-timeline-role { font-size: 1rem; color: #666; margin-bottom: 1rem; } .ds-timeline-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; } .ds-timeline-list li { color: #666; font-size: 0.95rem; padding-left: 1.2rem; position: relative; } .ds-timeline-list li::before { content: '→'; position: absolute; left: 0; color: #2563eb; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Consola Oscura",
+    "overview": "El portfolio se concibe como una terminal abierta: fondo oscuro como canvas, señales de color que transmiten información, tipografía precisa. Cada elemento está donde tiene que estar porque su función lo exige, no porque ocupe espacio. El modo claro es el turno diurno: mismo rigor, fondo más luminoso, misma intensidad de señal.\n\nEl sistema rechaza explícitamente: portfolios template, glorificación decorativa (glassmorphism, gradientes sin propósito, sombras expansivas), layouts que esconden la información detrás de adornos. La deuda técnica visual no se perdona: si un elemento no comunica expertise, sobra.",
+    "keyCharacteristics": [
+      "Alto contraste en ambos modos (oscuro como lienzo principal, claro como alternancia)",
+      "Paleta de tres acentos con roles definidos (Señal, Señal-profunda, Acento-cálido)",
+      "Interacciones sólidas y predecibles — el hover no sorprende, confirma",
+      "Elevación híbrida: superficies planas en reposo, sombra suave al interactuar",
+      "Sin texto gradiente, sin glassmorphism, sin bordes decorativos laterales"
+    ],
+    "rules": [
+      { "name": "La Regla de Señal", "body": "El acento azul aparece solo en elementos con los que se interactúa o que comunican información primaria. No se usa como relleno decorativo, fondo de sección, o borde lateral. Su presencia es siempre intencional.", "section": "colors" },
+      { "name": "La Regla de la Señal Visual", "body": "Inter es la única voz. No se introducen segundas familias sans-serif que compitan con Inter. JetBrains Mono es la excepción única y exclusiva para contenido técnico.", "section": "typography" },
+      { "name": "La Regla Sin Sombra en Reposo", "body": "Ninguna superficie tiene sombra por defecto. La elevación es una respuesta, no un estado basal. Excepción: la foto de perfil del hero, que es un punto focal estructural.", "section": "elevation" }
+    ],
+    "dos": [
+      "Usar Señal (azul) exclusivamente para elementos interactivos y números destacados.",
+      "Mantener contraste ≥ 4.5:1 en texto body y placeholder.",
+      "Usar text-wrap: balance en headings y text-wrap: pretty en párrafos largos.",
+      "Espaciar con ritmo: separaciones generosas entre secciones (6rem), compactas dentro de componentes (1rem).",
+      "Respetar el modo oscuro como lienzo principal y el claro como alternancia equivalente.",
+      "Usar translateY + shadow como respuesta a hover de tarjetas y botones."
+    ],
+    "donts": [
+      "No usar gradient text (background-clip: text + gradiente). El hero name actual usa esta técnica y es una violación conocida del sistema. Reemplazar por color sólido Señal.",
+      "No usar side-stripe borders (borde izquierdo/derecho > 1px como acento decorativo).",
+      "No aplicar glassmorphism (backdrop-filter blur decorativo en superficies).",
+      "No usar sombras en superficies en reposo. La elevación se gana con la interacción.",
+      "No mezclar fuentes sans-serif. Inter es la única familia para texto proporcional.",
+      "No caer en layouts template: portfolios Bootstrap, themes prefabricados, secciones idénticas con icono + heading + texto.",
+      "No usar emojis como íconos principales donde corresponde SVG inline.",
+      "No superponer border: 1px solid + box-shadow con blur ≥ 16px en el mismo elemento.",
+      "No usar 'eyebrow' tracking uppercase repetido sobre cada sección."
+    ]
+  }
+}
