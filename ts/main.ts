@@ -52,11 +52,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ============================================
 const navbar = document.getElementById('navbar') as HTMLElement;
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'var(--bg-primary)';
-    } else {
-        navbar.style.background = 'var(--navbar-bg)';
-    }
+    navbar.classList.toggle('navbar--scrolled', window.scrollY > 50);
 });
 
 // ============================================
@@ -82,45 +78,6 @@ document.querySelectorAll('.reveal').forEach(el => {
 });
 
 // ============================================
-// Stats Counter Animation
-// ============================================
-function animateCounter(el: HTMLElement): void {
-    const target = parseInt(el.getAttribute('data-target') || '0');
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(currentTime: number): void {
-        const elapsed = currentTime - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.floor(eased * target);
-
-        el.textContent = current >= 1000 ? `${Math.floor(current / 1000)}K+` : `${current}+`;
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        }
-    }
-
-    requestAnimationFrame(update);
-}
-
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const numbers = entry.target.querySelectorAll('.stat__number');
-            numbers.forEach(num => animateCounter(num as HTMLElement));
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
-
-// ============================================
 // Active Nav Link on Scroll
 // ============================================
 const sections = document.querySelectorAll('section[id]');
@@ -134,32 +91,99 @@ window.addEventListener('scroll', () => {
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+        const isActive = link.getAttribute('href') === `#${current}`;
+        link.classList.toggle('active', isActive);
+        if (isActive) {
+            link.setAttribute('aria-current', 'section');
+        } else {
+            link.removeAttribute('aria-current');
         }
     });
 });
 
 // ============================================
-// Contact Form (mailto)
+// Contact Form (Formspree + mailto fallback)
 // ============================================
 const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
+const formStatus = document.getElementById('form-status') as HTMLDivElement | null;
+const submitBtn = document.getElementById('form-submit') as HTMLButtonElement | null;
+
+function setFormError(fieldId: string, message: string): void {
+    const errorEl = document.getElementById(fieldId) as HTMLSpanElement | null;
+    const input = errorEl?.previousElementSibling as HTMLElement | null;
+    if (errorEl) errorEl.textContent = message;
+    if (input) input.classList.toggle('input-error', !!message);
+}
+
+function clearFormErrors(): void {
+    document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+}
+
+function setFormStatus(type: 'success' | 'error' | '', message: string): void {
+    if (!formStatus) return;
+    formStatus.textContent = message;
+    formStatus.className = `form-status form-status--${type}`;
+}
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        clearFormErrors();
 
         const name = (document.getElementById('name') as HTMLInputElement).value.trim();
         const email = (document.getElementById('email') as HTMLInputElement).value.trim();
         const message = (document.getElementById('message') as HTMLTextAreaElement).value.trim();
 
-        if (!name || !email || !message) return;
+        let valid = true;
 
-        const to = 'agustingigena1704@gmail.com';
-        const subject = encodeURIComponent(`Contacto desde portfolio — ${name}`);
-        const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`);
+        if (!name) { setFormError('name-error', 'El nombre es obligatorio'); valid = false; }
+        if (!email) { setFormError('email-error', 'El email es obligatorio'); valid = false; }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setFormError('email-error', 'Email no válido'); valid = false;
+        }
+        if (!message) { setFormError('message-error', 'El mensaje es obligatorio'); valid = false; }
 
-        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+        if (!valid) return;
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.classList.add('btn--loading');
+        }
+        setFormStatus('', '');
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                setFormStatus('success', '¡Mensaje enviado! Te respondo a la brevedad.');
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                setFormStatus('error', data?.error || 'Error al enviar. Usá el enlace de email directo.');
+                fallbackMailto(name, email, message);
+            }
+        } catch {
+            setFormStatus('error', 'No se pudo conectar. Abriendo tu cliente de email...');
+            fallbackMailto(name, email, message);
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('btn--loading');
+            }
+        }
     });
+}
+
+function fallbackMailto(name: string, email: string, message: string): void {
+    const to = 'agustingigena1704@gmail.com';
+    const subject = encodeURIComponent(`Contacto desde portfolio — ${name}`);
+    const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 }
