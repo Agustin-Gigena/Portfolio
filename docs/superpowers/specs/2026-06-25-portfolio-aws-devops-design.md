@@ -86,7 +86,7 @@ Modificar el portfolio para eliminar la sección Blog y agregar experiencia en A
 
 Después de Educación, antes de Proyectos:
 
-- **ISO 27001:2022** — Oficial de Seguridad (Alephoo, actualidad)
+- **Introducción al estándar ISO/IEC 27001:2022** — Grupo Crescent (Junio 2026, Capacitación como Oficial de Seguridad en Alephoo)
 
 ---
 

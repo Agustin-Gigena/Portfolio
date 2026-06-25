@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "microsoft/markitdown": {
+      "type": "local",
+      "command": ["/home/agigena/HDD/Repositorios/Portfolio/.venv/bin/markitdown-mcp"],
+      "enabled": true
+    }
+  }
+}

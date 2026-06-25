@@ -1,6 +1,6 @@
 ---
 name: Portfolio Agustin Gigena
-description: Portfolio profesional de desarrollador Full Stack / .NET Developer
+description: Portfolio profesional de desarrollador .NET Full Stack
 colors:
   senal: "#2563eb"
   senal-hover: "#1d4ed8"

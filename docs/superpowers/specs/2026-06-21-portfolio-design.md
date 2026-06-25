@@ -55,10 +55,10 @@ Portfolio personal de Agustin Gigena, desarrollador Full Stack / .NET Developer.
 1. **Hero** — Foto circular, nombre, título, tagline, links a redes
 2. **Sobre mí** — Perfil resumido + stats (años exp, proyectos, tecnologías, horas código)
 3. **Experiencia** — Timeline vertical con cada puesto laboral
-4. **Skills** — Categorías: Backend, Frontend, DevOps, Herramientas (chips con iconos)
-5. **Educación + Certificaciones** — Formación académica y cursos
-6. **Proyectos** — Cards grid: nombre, descripción, tech tags, link GitHub
-7. **Blog** — Placeholder para futuro contenido
+4. **Skills** — Categorías: Backend, Cloud & DevOps, Frontend, Bases de datos, Herramientas (chips con iconos)
+5. **Educación** — Formación académica
+6. **Certificaciones** — Certificaciones y capacitaciones (ISO 27001)
+7. **Proyectos** — Cards grid: nombre, descripción, tech tags, link GitHub
 8. **Contacto** — Formulario (UI) + links directos (email, LinkedIn, GitHub)
 
 ### Footer
@@ -71,7 +71,7 @@ Portfolio personal de Agustin Gigena, desarrollador Full Stack / .NET Developer.
 ### Hero
 - Foto circular (borde sutil)
 - Nombre: Inter bold, 3-4rem
-- Título: "Desarrollador Full Stack / .NET Developer"
+- Título: "Desarrollador .NET Full Stack"
 - Icons de redes: LinkedIn, GitHub, Email (SVG inline)
 
 ### Stats
