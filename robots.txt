@@ -1,0 +1,36 @@
+# robots.txt - agigena.com
+# Allowed AI bots for GEO (Generative Engine Optimization)
+
+User-agent: *
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing / Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+User-agent: msnbot
+Allow: /
+User-agent: PermaBot
+Allow: /
+
+# ChatGPT / OpenAI
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Claude / Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://agigena.com/sitemap.xml
