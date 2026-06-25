@@ -973,6 +973,10 @@ section {
         padding-bottom: 2rem;
     }
 
+    .timeline__item::before {
+        left: -1.5rem;
+    }
+
     .timeline__company {
         font-size: 1.1rem;
     }
