@@ -372,7 +372,10 @@
             <h2 class="section__title">Contacto</h2>
             <p class="section__subtitle">¿Trabajamos juntos?</p>
             <div class="contact__grid">
-                <form class="contact__form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="7d61b2c9-a691-4743-9e79-a4fa7a78954e">
+                    <input type="hidden" name="subject" value="Contacto desde portfolio">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" placeholder="Tu nombre" required>

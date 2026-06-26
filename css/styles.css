@@ -735,6 +735,10 @@ section {
     gap: 0.4rem;
 }
 
+.btn-loading[hidden] {
+    display: none;
+}
+
 .btn-spinner {
     animation: spin 0.8s linear infinite;
 }

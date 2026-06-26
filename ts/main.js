@@ -91,7 +91,7 @@ window.addEventListener('scroll', () => {
     });
 });
 // ============================================
-// Contact Form (Formspree + mailto fallback)
+// Contact Form (Web3Forms + mailto fallback)
 // ============================================
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
@@ -150,15 +150,13 @@ if (contactForm) {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: { 'Accept': 'application/json' }
             });
             if (response.ok) {
                 setFormStatus('success', '¡Mensaje enviado! Te respondo a la brevedad.');
                 contactForm.reset();
             }
             else {
-                const data = await response.json();
-                setFormStatus('error', data?.error || 'Error al enviar. Usá el enlace de email directo.');
+                setFormStatus('error', 'Error al enviar. Intentá de nuevo o usá el email directo.');
                 fallbackMailto(name, email, message);
             }
         }
