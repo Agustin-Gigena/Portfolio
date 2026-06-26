@@ -13,6 +13,11 @@
 
     <link rel="canonical" href="https://agigena.com/">
 
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="es" href="https://agigena.com/">
+    <link rel="alternate" hreflang="en" href="https://agigena.com/">
+    <link rel="alternate" hreflang="x-default" href="https://agigena.com/">
+
     <!-- Open Graph -->
     <meta property="og:title" content="Agustin Gigena | Desarrollador Full Stack .NET & DevOps">
     <meta property="og:description" content="Desarrollador .NET Full Stack con 4+ años de experiencia en C#, AWS, CI/CD y liderazgo técnico. Portfolio profesional.">
@@ -139,13 +144,16 @@
         <div class="navbar__container">
             <a href="#hero" class="navbar__logo">Agustin Gigena</a>
             <nav class="navbar__links" id="nav-links">
-                <a href="#about">Sobre mí</a>
-                <a href="#experience">Experiencia</a>
+                <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
+                <a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#contact">Contacto</a>
+                <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
             </nav>
             <div class="navbar__right">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+                    <span class="lang-toggle__label">ES</span>
+                </button>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                     <span class="theme-toggle__icon">🌙</span>
                 </button>
@@ -163,8 +171,8 @@
         <section id="hero" class="hero">
             <img src="img/profile.png" alt="Agustin Gigena" class="hero__photo">
             <h1 class="hero__name">Agustin Gigena</h1>
-            <p class="hero__title">Desarrollador .NET Full Stack</p>
-            <p class="hero__tagline">Más de 4 años de experiencia en C# y .NET, liderando equipos de soporte técnico, gestionando infraestructura AWS y automatizando pipelines CI/CD para entornos productivos.</p>
+            <p class="hero__title" data-es="Desarrollador .NET Full Stack" data-en="Full Stack .NET Developer">Desarrollador .NET Full Stack</p>
+            <p class="hero__tagline" data-es="Más de 4 años de experiencia en C# y .NET, liderando equipos de soporte técnico, gestionando infraestructura AWS y automatizando pipelines CI/CD para entornos productivos." data-en="4+ years of experience in C# and .NET, leading support teams, managing AWS infrastructure, and automating CI/CD pipelines for production environments.">Más de 4 años de experiencia en C# y .NET, liderando equipos de soporte técnico, gestionando infraestructura AWS y automatizando pipelines CI/CD para entornos productivos.</p>
             <div class="hero__links">
                 <a href="https://www.linkedin.com/in/agustin-gigena-94035a221" target="_blank" rel="noopener" class="hero__link" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -180,23 +188,23 @@
 
         <!-- About -->
         <section id="about" class="about reveal">
-            <h2 class="section__title">Sobre mí</h2>
-            <p class="section__subtitle">Mi perfil profesional</p>
+            <h2 class="section__title" data-es="Sobre mí" data-en="About me">Sobre mí</h2>
+            <p class="section__subtitle" data-es="Mi perfil profesional" data-en="My professional profile">Mi perfil profesional</p>
             <div class="about__content">
                 <div class="about__text">
-                    <p>Desarrollador Full Stack con más de 4 años de experiencia independiente en C# y 2 años de trayectoria profesional en el desarrollo de soluciones de software. Especializado en el ecosistema .NET, gestionando infraestructura en AWS con más de 10 servicios (EC2, ECS, Lambda, RDS, S3, CloudFormation, CloudWatch, entre otros) y automatizando pipelines CI/CD completos.</p>
+                    <p data-es="Desarrollador Full Stack con más de 4 años de experiencia independiente en C# y 2 años de trayectoria profesional en el desarrollo de soluciones de software. Especializado en el ecosistema .NET, gestionando infraestructura en AWS con más de 10 servicios (EC2, ECS, Lambda, RDS, S3, CloudFormation, CloudWatch, entre otros) y automatizando pipelines CI/CD completos." data-en="Full Stack Developer with 4+ years of independent experience in C# and 2 years of professional software development. Specialized in the .NET ecosystem, managing AWS infrastructure across 10+ services (EC2, ECS, Lambda, RDS, S3, CloudFormation, CloudWatch, and more) and automating end-to-end CI/CD pipelines.">Desarrollador Full Stack con más de 4 años de experiencia independiente en C# y 2 años de trayectoria profesional en el desarrollo de soluciones de software. Especializado en el ecosistema .NET, gestionando infraestructura en AWS con más de 10 servicios (EC2, ECS, Lambda, RDS, S3, CloudFormation, CloudWatch, entre otros) y automatizando pipelines CI/CD completos.</p>
                     <br>
-                    <p>Apasionado por la mejora continua, actualmente implementando metodologías de desarrollo asistido por Inteligencia Artificial (Spec Driven Development / Ralph) e integración de funciones de IA en entornos productivos. Como señaló Satya Nadella, CEO de Microsoft: "Cada desarrollador construirá aplicaciones que utilizan IA, y .NET está en el centro de esa transformación."</p>
+                    <p data-es="Apasionado por la mejora continua, actualmente implementando metodologías de desarrollo asistido por Inteligencia Artificial (Spec Driven Development / Ralph) e integración de funciones de IA en entornos productivos. Como señaló Satya Nadella, CEO de Microsoft: &quot;Cada desarrollador construirá aplicaciones que utilizan IA, y .NET está en el centro de esa transformación.&quot;" data-en="Passionate about continuous improvement, currently implementing AI-assisted development methodologies (Spec Driven Development / Ralph) and integrating AI features into production environments. As Satya Nadella, CEO of Microsoft, stated: &quot;Every developer will build applications that use AI, and .NET is at the center of that transformation.&quot;">Apasionado por la mejora continua, actualmente implementando metodologías de desarrollo asistido por Inteligencia Artificial (Spec Driven Development / Ralph) e integración de funciones de IA en entornos productivos. Como señaló Satya Nadella, CEO de Microsoft: &quot;Cada desarrollador construirá aplicaciones que utilizan IA, y .NET está en el centro de esa transformación.&quot;</p>
                 </div>
                 <div class="about__skills-preview">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Aptitudes clave</h3>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.1rem;" data-es="Aptitudes clave" data-en="Key skills">Aptitudes clave</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Análisis técnico</span>
-                        <span class="skill-tag">Resolución de problemas</span>
-                        <span class="skill-tag">Adaptación</span>
-                        <span class="skill-tag">Resolutivo</span>
-                        <span class="skill-tag">Operativo</span>
-                        <span class="skill-tag">Perseverante</span>
+                        <span class="skill-tag" data-es="Análisis técnico" data-en="Technical analysis">Análisis técnico</span>
+                        <span class="skill-tag" data-es="Resolución de problemas" data-en="Problem solving">Resolución de problemas</span>
+                        <span class="skill-tag" data-es="Adaptación" data-en="Adaptability">Adaptación</span>
+                        <span class="skill-tag" data-es="Resolutivo" data-en="Solution-oriented">Resolutivo</span>
+                        <span class="skill-tag" data-es="Operativo" data-en="Operational">Operativo</span>
+                        <span class="skill-tag" data-es="Perseverante" data-en="Perseverant">Perseverante</span>
                     </div>
                 </div>
             </div>
@@ -204,31 +212,32 @@
 
         <!-- Experience -->
         <section id="experience" class="experience reveal">
-            <h2 class="section__title">Experiencia</h2>
-            <p class="section__subtitle">Mi trayectoria profesional</p>
+            <h2 class="section__title" data-es="Experiencia" data-en="Experience">Experiencia</h2>
+            <p class="section__subtitle" data-es="Mi trayectoria profesional" data-en="My professional career">Mi trayectoria profesional</p>
             <div class="timeline">
                 <div class="timeline__item">
-                    <div class="timeline__date">2024 — Presente</div>
+                    <div class="timeline__date" data-es="2024 — Presente" data-en="2024 — Present">2024 — Presente</div>
                     <div class="timeline__company">Alephoo</div>
-                    <div class="timeline__role">Reliability & Security, Infraestructura</div>
+                    <div class="timeline__role" data-es="Soporte Técnico → Reliability &amp; Security, Infraestructura" data-en="Technical Support → Reliability &amp; Security, Infrastructure">Soporte Técnico → Reliability &amp; Security, Infraestructura</div>
                     <ul class="timeline__list">
-                        <li>Lideré el equipo de soporte técnico avanzado, resolviendo incidentes críticos y coordinando entregas con una tasa de resolución del 95% en primera línea.</li>
-                        <li>Configuré sistema de CI/CD automatizado con ECS y GitHub Actions, reduciendo tiempos de despliegue de horas a minutos.</li>
-                        <li>Gestión de más de 10 servicios AWS: EC2, ECS, ECR, Lambda, RDS, IAM, CloudFormation, CloudWatch, S3, EventBridge, Secret Manager, Amplify.</li>
-                        <li>Dashboards de monitoreo con CloudWatch para 15+ métricas críticas de infraestructura.</li>
-                        <li>Dumps automáticos de base de datos con backup en disco físico, garantizando RPO de 24 horas.</li>
-                        <li>Oficial de Seguridad — Responsable de implementación y cumplimiento de ISO 27001.</li>
+                        <li data-es="Ingresé como desarrollador del equipo de soporte técnico, resolviendo incidentes, brindando asistencia a clientes y escalando problemas complejos durante 15 meses." data-en="Joined as a technical support team developer, resolving incidents, assisting clients, and escalating complex issues for 15 months.">Ingresé como desarrollador del equipo de soporte técnico, resolviendo incidentes, brindando asistencia a clientes y escalando problemas complejos durante 15 meses.</li>
+                        <li data-es="Promovido a Reliability &amp; Security: lideré el equipo de infraestructura y seguridad, resolviendo incidentes críticos y optimizando costos y rendimientos de la infraestructura." data-en="Promoted to Reliability &amp; Security: led the infrastructure and security team, resolving critical incidents and optimizing infrastructure costs and performance.">Promovido a Reliability &amp; Security: lideré el equipo de infraestructura y seguridad, resolviendo incidentes críticos y optimizando costos y rendimientos de la infraestructura.</li>
+                        <li data-es="Configuré sistema de CI/CD automatizado con ECS y GitHub Actions, reduciendo tiempos de despliegue de horas a minutos." data-en="Set up automated CI/CD system with ECS and GitHub Actions, reducing deployment times from hours to minutes.">Configuré sistema de CI/CD automatizado con ECS y GitHub Actions, reduciendo tiempos de despliegue de horas a minutos.</li>
+                        <li data-es="Gestión de más de 10 servicios AWS: EC2, ECS, ECR, Lambda, RDS, IAM, CloudFormation, CloudWatch, S3, EventBridge, Secret Manager, Amplify." data-en="Managed 10+ AWS services: EC2, ECS, ECR, Lambda, RDS, IAM, CloudFormation, CloudWatch, S3, EventBridge, Secret Manager, Amplify.">Gestión de más de 10 servicios AWS: EC2, ECS, ECR, Lambda, RDS, IAM, CloudFormation, CloudWatch, S3, EventBridge, Secret Manager, Amplify.</li>
+                        <li data-es="Dashboards de monitoreo con CloudWatch para 15+ métricas críticas de infraestructura." data-en="Monitoring dashboards with CloudWatch for 15+ critical infrastructure metrics.">Dashboards de monitoreo con CloudWatch para 15+ métricas críticas de infraestructura.</li>
+                        <li data-es="Dumps automáticos de base de datos con backup en disco físico, garantizando RPO de 24 horas." data-en="Automated database dumps with physical disk backup, ensuring 24-hour RPO.">Dumps automáticos de base de datos con backup en disco físico, garantizando RPO de 24 horas.</li>
+                        <li data-es="Oficial de Seguridad — Responsable de implementación y cumplimiento de ISO 27001." data-en="Security Officer — Responsible for ISO 27001 implementation and compliance.">Oficial de Seguridad — Responsable de implementación y cumplimiento de ISO 27001.</li>
                     </ul>
                 </div>
                 <div class="timeline__item">
-                    <div class="timeline__date">2022 — Presente (+4 años)</div>
-                    <div class="timeline__company">Independiente</div>
-                    <div class="timeline__role">Desarrollador Full Stack</div>
+                    <div class="timeline__date" data-es="2022 — Presente (+4 años)" data-en="2022 — Present (+4 years)">2022 — Presente (+4 años)</div>
+                    <div class="timeline__company" data-es="Independiente" data-en="Freelance">Independiente</div>
+                    <div class="timeline__role" data-es="Desarrollador Full Stack" data-en="Full Stack Developer">Desarrollador Full Stack</div>
                     <ul class="timeline__list">
-                        <li>Diseñé y desarrollé una aplicación de escritorio en .NET Core con Entity Framework para la gestión integral de jugadores de rugby y entrenamientos, vinculada a bases de datos relacionales MySQL y PostgreSQL.</li>
-                        <li>Implementé un sistema de actualización automática integrado con repositorios de GitHub y empaquetado mediante WindowsSetup, beneficiando a más de 50 usuarios activos.</li>
-                        <li>Deploy de RugbyEngine en VPC de Oracle Cloud con CI/CD automático (GitHub Actions + scripts custom) sobre Docker, Docker Compose y Kubernetes, logrando alta disponibilidad con balanceo de carga.</li>
-                        <li>Creación de más de 15 herramientas de automatización de tareas y scripts de optimización del sistema utilizando C# y entornos Linux.</li>
+                        <li data-es="Diseñé y desarrollé una aplicación de escritorio en .NET Core con Entity Framework para la gestión integral de jugadores de rugby y entrenamientos, vinculada a bases de datos relacionales MySQL y PostgreSQL." data-en="Designed and developed a .NET Core desktop application with Entity Framework for comprehensive rugby player and training management, connected to MySQL and PostgreSQL relational databases.">Diseñé y desarrollé una aplicación de escritorio en .NET Core con Entity Framework para la gestión integral de jugadores de rugby y entrenamientos, vinculada a bases de datos relacionales MySQL y PostgreSQL.</li>
+                        <li data-es="Implementé un sistema de actualización automática integrado con repositorios de GitHub y empaquetado mediante WindowsSetup, beneficiando a más de 50 usuarios activos." data-en="Implemented an automatic update system integrated with GitHub repositories and packaged via WindowsSetup, benefiting 50+ active users.">Implementé un sistema de actualización automática integrado con repositorios de GitHub y empaquetado mediante WindowsSetup, beneficiando a más de 50 usuarios activos.</li>
+                        <li data-es="Deploy de RugbyEngine en VPC de Oracle Cloud con CI/CD automático (GitHub Actions + scripts custom) sobre Docker, Docker Compose y Kubernetes, logrando alta disponibilidad con balanceo de carga." data-en="Deployed RugbyEngine on Oracle Cloud VPC with automated CI/CD (GitHub Actions + custom scripts) on Docker, Docker Compose, and Kubernetes, achieving high availability with load balancing.">Deploy de RugbyEngine en VPC de Oracle Cloud con CI/CD automático (GitHub Actions + scripts custom) sobre Docker, Docker Compose y Kubernetes, logrando alta disponibilidad con balanceo de carga.</li>
+                        <li data-es="Creación de más de 15 herramientas de automatización de tareas y scripts de optimización del sistema utilizando C# y entornos Linux." data-en="Created 15+ task automation tools and system optimization scripts using C# and Linux environments.">Creación de más de 15 herramientas de automatización de tareas y scripts de optimización del sistema utilizando C# y entornos Linux.</li>
                     </ul>
                 </div>
             </div>
@@ -237,7 +246,7 @@
         <!-- Skills -->
         <section id="skills" class="skills reveal">
             <h2 class="section__title">Skills</h2>
-            <p class="section__subtitle">Tecnologías y herramientas que domino</p>
+            <p class="section__subtitle" data-es="Tecnologías y herramientas que domino" data-en="Technologies and tools I master">Tecnologías y herramientas que domino</p>
             <div class="skills__grid">
                 <div class="skill-category">
                     <h3 class="skill-category__title"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span> Backend</h3>
@@ -253,7 +262,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 class="skill-category__title"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span> Cloud & DevOps</h3>
+                    <h3 class="skill-category__title" data-es="Cloud &amp; DevOps" data-en="Cloud &amp; DevOps"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span> Cloud & DevOps</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">Docker</span>
@@ -274,14 +283,14 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 class="skill-category__title"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span> Bases de datos</h3>
+                    <h3 class="skill-category__title" data-es="Bases de datos" data-en="Databases"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span> Bases de datos</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">PostgreSQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 class="skill-category__title"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span> Herramientas</h3>
+                    <h3 class="skill-category__title" data-es="Herramientas" data-en="Tools"><span class="skill-category__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span> Herramientas</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">GitHub</span>
@@ -293,31 +302,31 @@
 
         <!-- Education -->
         <section id="education" class="education reveal">
-            <h2 class="section__title">Educación</h2>
-            <p class="section__subtitle">Formación académica y certificaciones</p>
+            <h2 class="section__title" data-es="Educación" data-en="Education">Educación</h2>
+            <p class="section__subtitle" data-es="Formación académica y certificaciones" data-en="Academic training and certifications">Formación académica y certificaciones</p>
             <div class="education__list">
                 <div class="education__item">
-                    <div class="education__date">2024 — Actualidad</div>
-                    <div class="education__title">Tecnicatura Universitaria en Programación</div>
-                    <div class="education__institution">Universidad Tecnológica Nacional (UTN FRD) — Cursando 2° y último año</div>
+                    <div class="education__date" data-es="2024 — Actualidad" data-en="2024 — Present">2024 — Actualidad</div>
+                    <div class="education__title" data-es="Tecnicatura Universitaria en Programación" data-en="University Technician in Programming">Tecnicatura Universitaria en Programación</div>
+                    <div class="education__institution" data-es="Universidad Tecnológica Nacional (UTN FRD) — Cursando 2° y último año" data-en="Universidad Tecnológica Nacional (UTN FRD) — 2nd and final year">Universidad Tecnológica Nacional (UTN FRD) — Cursando 2° y último año</div>
                 </div>
                 <div class="education__item">
-                    <div class="education__date">Complementaria</div>
-                    <div class="education__title">Introducción al Desarrollo de Aplicaciones Blazor en .NET 10</div>
-                    <div class="education__institution">Formación Complementaria</div>
+                    <div class="education__date" data-es="Complementaria" data-en="Supplementary">Complementaria</div>
+                    <div class="education__title" data-es="Introducción al Desarrollo de Aplicaciones Blazor en .NET 10" data-en="Introduction to Blazor Application Development in .NET 10">Introducción al Desarrollo de Aplicaciones Blazor en .NET 10</div>
+                    <div class="education__institution" data-es="Formación Complementaria" data-en="Supplementary Training">Formación Complementaria</div>
                 </div>
             </div>
         </section>
 
         <!-- Certifications -->
         <section id="certifications" class="certifications reveal">
-            <h2 class="section__title">Certificaciones</h2>
-            <p class="section__subtitle">Certificaciones y capacitaciones</p>
+            <h2 class="section__title" data-es="Certificaciones" data-en="Certifications">Certificaciones</h2>
+            <p class="section__subtitle" data-es="Certificaciones y capacitaciones" data-en="Certifications and training">Certificaciones y capacitaciones</p>
             <div class="certifications__list">
                 <div class="certification__item">
-                    <div class="certification__date">Junio 2026</div>
-                    <div class="certification__title">Introducción al estándar ISO/IEC 27001:2022</div>
-                    <div class="certification__institution">Grupo Crescent — Capacitación como Oficial de Seguridad en Alephoo</div>
+                    <div class="certification__date" data-es="Junio 2026" data-en="June 2026">Junio 2026</div>
+                    <div class="certification__title" data-es="Introducción al estándar ISO/IEC 27001:2022" data-en="Introduction to ISO/IEC 27001:2022 standard">Introducción al estándar ISO/IEC 27001:2022</div>
+                    <div class="certification__institution" data-es="Grupo Crescent — Capacitación como Oficial de Seguridad en Alephoo" data-en="Grupo Crescent — Security Officer Training at Alephoo">Grupo Crescent — Capacitación como Oficial de Seguridad en Alephoo</div>
                     <img src="img/certificado-iso27001.png" alt="Certificado ISO/IEC 27001:2022 - Agustín Gigena" class="certification__image">
                 </div>
             </div>
@@ -325,60 +334,60 @@
 
         <!-- Projects -->
         <section id="projects" class="projects reveal">
-            <h2 class="section__title">Proyectos</h2>
-            <p class="section__subtitle">Proyectos destacados y contribuciones</p>
+            <h2 class="section__title" data-es="Proyectos" data-en="Projects">Proyectos</h2>
+            <p class="section__subtitle" data-es="Proyectos destacados y contribuciones" data-en="Featured projects and contributions">Proyectos destacados y contribuciones</p>
             <div class="projects__grid">
                 <div class="project-card">
                     <div class="project-card__name">OpenCode Integration</div>
-                    <div class="project-card__desc">Extensión para VS Code que permite interactuar con OpenCode directamente desde el propio IDE, acelerando los tiempos de codificación y optimizando el flujo de trabajo del desarrollador.</div>
+                    <div class="project-card__desc" data-es="Extensión para VS Code que permite interactuar con OpenCode directamente desde el propio IDE, acelerando los tiempos de codificación y optimizando el flujo de trabajo del desarrollador." data-en="VS Code extension that allows interacting with OpenCode directly from the IDE, accelerating coding times and optimizing the developer workflow.">Extensión para VS Code que permite interactuar con OpenCode directamente desde el propio IDE, acelerando los tiempos de codificación y optimizando el flujo de trabajo del desarrollador.</div>
                     <div class="project-card__tags">
                         <span class="project-card__tag">TypeScript</span>
                         <span class="project-card__tag">VS Code</span>
                     </div>
-                    <a href="https://github.com/Agustin-Gigena/opencode-sidebar-web" target="_blank" rel="noopener" class="project-card__link">Ver en GitHub →</a>
+                    <a href="https://github.com/Agustin-Gigena/opencode-sidebar-web" target="_blank" rel="noopener" class="project-card__link" data-es="Ver en GitHub →" data-en="View on GitHub →">Ver en GitHub →</a>
                 </div>
                 <div class="project-card">
                     <div class="project-card__name">RugbyEngine</div>
-                    <div class="project-card__desc">Motor de juego desarrollado en C# para gestión de rugby, con sistema de jugadores, entrenamientos y base de datos relacional.</div>
+                    <div class="project-card__desc" data-es="Motor de juego desarrollado en C# para gestión de rugby, con sistema de jugadores, entrenamientos y base de datos relacional." data-en="Game engine developed in C# for rugby management, with player system, training, and relational database.">Motor de juego desarrollado en C# para gestión de rugby, con sistema de jugadores, entrenamientos y base de datos relacional.</div>
                     <div class="project-card__tags">
                         <span class="project-card__tag">C#</span>
                         <span class="project-card__tag">.NET</span>
                     </div>
-                    <a href="https://github.com/Agustin-Gigena/RugbyEngine" target="_blank" rel="noopener" class="project-card__link">Ver en GitHub →</a>
+                    <a href="https://github.com/Agustin-Gigena/RugbyEngine" target="_blank" rel="noopener" class="project-card__link" data-es="Ver en GitHub →" data-en="View on GitHub →">Ver en GitHub →</a>
                 </div>
 
                 <div class="project-card">
                     <div class="project-card__name">GameOfLife</div>
-                    <div class="project-card__desc">Implementación del Juego de la Vida de Conway en Rust, explorando programación funcional y sistemas.</div>
+                    <div class="project-card__desc" data-es="Implementación del Juego de la Vida de Conway en Rust, explorando programación funcional y sistemas." data-en="Conway's Game of Life implementation in Rust, exploring functional programming and systems.">Implementación del Juego de la Vida de Conway en Rust, explorando programación funcional y sistemas.</div>
                     <div class="project-card__tags">
                         <span class="project-card__tag">Rust</span>
                     </div>
-                    <a href="https://github.com/Agustin-Gigena/GameOfLife" target="_blank" rel="noopener" class="project-card__link">Ver en GitHub →</a>
+                    <a href="https://github.com/Agustin-Gigena/GameOfLife" target="_blank" rel="noopener" class="project-card__link" data-es="Ver en GitHub →" data-en="View on GitHub →">Ver en GitHub →</a>
                 </div>
                 <div class="project-card">
                     <div class="project-card__name">phpstan-rust</div>
-                    <div class="project-card__desc">Extensión o contribución relacionada con PHPStan y Rust, explorando análisis estático de código.</div>
+                    <div class="project-card__desc" data-es="Extensión o contribución relacionada con PHPStan y Rust, explorando análisis estático de código." data-en="Extension or contribution related to PHPStan and Rust, exploring static code analysis.">Extensión o contribución relacionada con PHPStan y Rust, explorando análisis estático de código.</div>
                     <div class="project-card__tags">
                         <span class="project-card__tag">Rust</span>
                         <span class="project-card__tag">PHP</span>
                     </div>
-                    <a href="https://github.com/Agustin-Gigena/phpstan-rust" target="_blank" rel="noopener" class="project-card__link">Ver en GitHub →</a>
+                    <a href="https://github.com/Agustin-Gigena/phpstan-rust" target="_blank" rel="noopener" class="project-card__link" data-es="Ver en GitHub →" data-en="View on GitHub →">Ver en GitHub →</a>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact" class="contact reveal">
-            <h2 class="section__title">Contacto</h2>
-            <p class="section__subtitle">¿Trabajamos juntos?</p>
+            <h2 class="section__title" data-es="Contacto" data-en="Contact">Contacto</h2>
+            <p class="section__subtitle" data-es="¿Trabajamos juntos?" data-en="Shall we work together?">¿Trabajamos juntos?</p>
             <div class="contact__grid">
                 <form class="contact__form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="7d61b2c9-a691-4743-9e79-a4fa7a78954e">
-                    <input type="hidden" name="subject" value="Contacto desde portfolio">
+                    <input type="hidden" name="subject" value="Contacto desde portfolio" data-es-value="Contacto desde portfolio" data-en-value="Contact from portfolio">
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        <label for="name" data-es="Nombre" data-en="Name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" required>
                         <span class="form-error" id="name-error"></span>
                     </div>
                     <div class="form-group">
@@ -387,18 +396,18 @@
                         <span class="form-error" id="email-error"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Escribí tu mensaje..." required></textarea>
+                        <label for="message" data-es="Mensaje" data-en="Message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Escribí tu mensaje..." data-placeholder-es="Escribí tu mensaje..." data-placeholder-en="Write your message..." required></textarea>
                         <span class="form-error" id="message-error"></span>
                     </div>
                     <div class="form-status" id="form-status"></div>
                     <button type="submit" class="btn" id="form-submit">
-                        <span class="btn-text">Enviar mensaje</span>
+                        <span class="btn-text" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</span>
                         <span class="btn-loading" hidden>
                             <svg class="btn-spinner" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32" stroke-linecap="round"/>
                             </svg>
-                            Enviando...
+                            <span data-es="Enviando..." data-en="Sending...">Enviando...</span>
                         </span>
                     </button>
                 </form>
@@ -440,11 +449,12 @@
         <div class="footer__links">
             <a href="https://www.linkedin.com/in/agustin-gigena-94035a221" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://github.com/Agustin-Gigena" target="_blank" rel="noopener">GitHub</a>
-            <a href="mailto:agustingigena1704@gmail.com">Email</a>
+            <a href="mailto:agustingigena1704@gmail.com" data-es="Email" data-en="Email">Email</a>
         </div>
-        <p>&copy; 2026 Agustin Gigena. Todos los derechos reservados.</p>
+        <p data-es="&copy; 2026 Agustin Gigena. Todos los derechos reservados." data-en="&copy; 2026 Agustin Gigena. All rights reserved.">&copy; 2026 Agustin Gigena. Todos los derechos reservados.</p>
     </footer>
 
     <script src="ts/main.js"></script>
+    <script src="ts/i18n.js"></script>
 </body>
 </html>
