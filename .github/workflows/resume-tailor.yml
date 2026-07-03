@@ -7,12 +7,41 @@ on:
         description: 'Descripción de la oferta de trabajo'
         required: true
         type: string
-      resume_path:
-        description: 'Ruta al archivo de currículum base'
-        required: false
-        default: 'resume.md'
       language:
-        description: 'Idioma del pie de página (es/en)'
+        description: 'Idioma del pie de página'
+        required: false
+        default: 'es'
+        type: choice
+        options:
+          - es
+          - en
+
+jobs:
+  tailor-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tailor resume workflow
+        run: |
+          node scripts/tailor-resume.mjs \
+            --job-desc "${{ github.event.inputs.job_description }}" \
+            --lang "${{ github.event.inputs.language }}"
+
+      - name: Upload tailored resume PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: tailored-resume
+          path: resume-ats.pdf
         required: false
         default: 'es'
 
