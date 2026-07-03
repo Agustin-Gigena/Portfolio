@@ -16,10 +16,8 @@ const langIdx = args.indexOf('--lang');
 const jobDescription = jobDescIdx !== -1 ? args[jobDescIdx + 1] : null;
 const resumePath = resumePathIdx !== -1 ? args[resumePathIdx + 1] : './resume.md';
 const lang = langIdx !== -1 ? args[langIdx + 1] : 'es';
-
 if (!jobDescription) {
-  console.error("Error: --job-desc es obligatorio.");
-  process.exit(1);
+  console.warn("⚠️  Advertencia: No se proporcionó descripción de trabajo. Se utilizará el currículum base.");
 }
 
 async function run() {

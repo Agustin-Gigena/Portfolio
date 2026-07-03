@@ -5,7 +5,7 @@ on:
     inputs:
       job_description:
         description: 'Descripción de la oferta de trabajo'
-        required: true
+        required: false
         type: string
       language:
         description: 'Idioma del pie de página'
