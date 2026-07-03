@@ -9,6 +9,8 @@
     "preview": "npx serve . -l 3000 --open"
   },
   "devDependencies": {
+    "marked": "^18.0.5",
+    "puppeteer": "^25.3.0",
     "typescript": "^5.0.0"
   }
 }

@@ -12,6 +12,18 @@
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "resume-tailor": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "skillPath": "resume-tailor/SKILL.md",
+      "computedHash": "ff501a55ad92e727dc707a0fb92fb7ecb5d37dcf5de13c6fcc2853da0a36e6b5"
+    },
+    "tailored-resume-generator": {
+      "source": "composiohq/awesome-claude-skills",
+      "sourceType": "github",
+      "skillPath": "tailored-resume-generator/SKILL.md",
+      "computedHash": "37ad72564c908b09bcccc8a34087bef06b12b4c38dc68d76cddba5afc588bd92"
     }
   }
 }
